@@ -1,2 +1,2 @@
 # AdditionalAI
-Add your own AI using this Additional AI feature
+Add your own AI to your website using this Additional AI feature
