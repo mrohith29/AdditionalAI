@@ -11,11 +11,24 @@
 <body>
 
     <div class="floating-icon">
-        <button class="fb"><img class="icon" src="icon.jpg"></button>
+        <button onclick="toggleForm()"><img class="icon" src="icon.jpg"></button>
         <script>
-    document.querySelector('.fb').addEventListener('click', function() {
-        window.location.href = 'https://www.google.com';
-    });
+            
+            function toggleForm() {
+             var form = document.getElementById("myForm");
+             if (form.style.right === "0px") {
+                 form.style.right = "-330px"; // Slide out
+             } else {
+                 form.style.right = "0px"; // Slide in
+             }
+         }
+         
+        function submitForm() {
+        // Here you can add your form submission logic
+        // For this example, let's just close the window
+        toggleForm();
+        return false; // Prevent default form submission
+        }
         </script>
     </div>
 
@@ -26,6 +39,24 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
+
+
+    <div id="myForm" class="window">
+        <form class="window-content" onsubmit="return submitForm()">
+          <h2>ROHITCHAT V2.0</h2>
+          <label for="lname">ENTER YOUR QUESTION HERE:</label><br>
+          <input type="text" id="lname" name=":" required><br><br>
+          <button type="submit">Submit</button>
+          <button type="button" onclick="toggleForm()">Close</button>
+        </form>
+      </div>
+
+      
+
+     
+
+    
+    
 
    
 
