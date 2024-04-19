@@ -14,36 +14,35 @@
         <button class="fb"><img class="icon" src="icon.jpg"></button>
         <form action=""></form>
         <script>
-    document.querySelector('.fb').addEventListener('click', function() {
-        window.location.href = '#';
-    });
+            document.querySelector('.fb').addEventListener('click', function () {
+                window.location.href = '#';
+            });
+        </script>
 
-        
-<!-- 
-<div class="chat-box" style="display: none; position: fixed; bottom: 0; left: 0; width: 300px; height: 400px; border: 1px solid black; padding: 10px; background-color: white;">
-    <div class="chat-messages" style="height: 80%; overflow-y: scroll;"></div>
-    <textarea class="chat-input" style="width: 100%; height: 20%;"></textarea>
-</div>
+        <div class="chat-box">
+            <div class="chat-messages" style="height: 80%; overflow-y: scroll;"></div>
+            <textarea class="chat-input" style="width: 100%; height: 20%;"></textarea>
+        </div>
 
-<script>
-    var chatBox = document.querySelector('.chat-box');
-    var chatInput = document.querySelector('.chat-input');
-    var chatMessages = document.querySelector('.chat-messages');
+        <script>
+            var chatBox = document.querySelector('.chat-box');
+            var chatInput = document.querySelector('.chat-input');
+            var chatMessages = document.querySelector('.chat-messages');
 
-    document.querySelector('.fb').addEventListener('click', function() {
-        chatBox.style.display = 'block';
-    });
+            document.querySelector('.fb').addEventListener('click', function () {
+                chatBox.style.display = 'block';
+            });
 
-    chatInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            var message = document.createElement('p');
-            message.textContent = chatInput.value;
-            chatMessages.appendChild(message);
-            chatInput.value = '';
-        }
-    });
-</script> -->
-        
+            chatInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    var message = document.createElement('p');
+                    message.textContent = chatInput.value;
+                    chatMessages.appendChild(message);
+                    chatInput.value = '';
+                }
+            });
+        </script>
+
     </div>
 
     <nav>
@@ -55,24 +54,6 @@
     </nav>
 
 
-    <div id="myForm" class="window">
-        <form class="window-content" onsubmit="return submitForm()">
-          <h2>ROHITCHAT V2.0</h2>
-          <label for="lname">ENTER YOUR QUESTION HERE:</label><br>
-          <input type="text" id="lname" name=":" required><br><br>
-          <button type="submit">Submit</button>
-          <button type="button" onclick="toggleForm()">Close</button>
-        </form>
-      </div>
-
-      
-
-     
-
-    
-    
-
-   
 
     <div id="home">
         <p>Introduction...</p>
