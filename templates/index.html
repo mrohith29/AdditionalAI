@@ -13,11 +13,6 @@
     <div class="floating-icon">
         <button class="fb"><img class="icon" src="icon.jpg"></button>
         <form action=""></form>
-        <script>
-            document.querySelector('.fb').addEventListener('click', function () {
-                window.location.href = '#';
-            });
-        </script>
 
         <div class="chat-box">
             <div class="chat-messages" style="height: 80%; overflow-y: scroll;"></div>
@@ -28,11 +23,17 @@
             var chatBox = document.querySelector('.chat-box');
             var chatInput = document.querySelector('.chat-input');
             var chatMessages = document.querySelector('.chat-messages');
-
+        
             document.querySelector('.fb').addEventListener('click', function () {
-                chatBox.style.display = 'block';
+                if (chatBox.style.display === 'none' || chatBox.style.display === '') {
+                    chatBox.style.display = 'block';
+                    document.getElementsByClassName('fb')[0].style.backgroundColor='grey';
+                } else {
+                    chatBox.style.display = 'none';
+                    document.getElementsByClassName('fb')[0].style.backgroundColor='white';
+                }
             });
-
+        
             chatInput.addEventListener('keypress', function (e) {
                 if (e.key === 'Enter') {
                     var message = document.createElement('p');
@@ -43,8 +44,6 @@
             });
         </script>
 
-
-<!-- sample comment -->
     </div>
 
     <nav>
