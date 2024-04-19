@@ -24,9 +24,7 @@
          }
          
         function submitForm() {
-        // Here you can add your form submission logic
-        // For this example, let's just close the window
-        toggleForm();
+        
         return false; // Prevent default form submission
         }
         </script>
@@ -44,7 +42,9 @@
     <div id="myForm" class="window">
         <form class="window-content" onsubmit="return submitForm()">
           <h2>ROHITCHAT V2.0</h2>
-          <label for="lname">ENTER YOUR QUESTION HERE:</label><br>
+          <label for="question">Your Question:</label><br>
+          <input type="text" id="question" name="question" required><br><br>
+          <label for="answer">Predefined Answer:</label><br>
           <input type="text" id="lname" name=":" required><br><br>
           <button type="submit">Submit</button>
           <button type="button" onclick="toggleForm()">Close</button>
