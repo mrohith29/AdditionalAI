@@ -25,22 +25,22 @@
         </div>
 
         <script>
-            
-            function toggleForm() {
-             var form = document.getElementById("myForm");
-             if (form.style.right === "0px") {
-                 form.style.right = "-330px"; // Slide out
-             } else {
-                 form.style.right = "0px"; // Slide in
-             }
-         }
-         
-        function submitForm() {
-        // Here you can add your form submission logic
-        // For this example, let's just close the window
-        toggleForm();
-        return false; // Prevent default form submission
-        }
+            var chatBox = document.querySelector('.chat-box');
+            var chatInput = document.querySelector('.chat-input');
+            var chatMessages = document.querySelector('.chat-messages');
+
+            document.querySelector('.fb').addEventListener('click', function () {
+                chatBox.style.display = 'block';
+            });
+
+            chatInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    var message = document.createElement('p');
+                    message.textContent = chatInput.value;
+                    chatMessages.appendChild(message);
+                    chatInput.value = '';
+                }
+            });
         </script>
 
 
@@ -56,24 +56,6 @@
     </nav>
 
 
-    <div id="myForm" class="window">
-        <form class="window-content" onsubmit="return submitForm()">
-          <h2>ROHITCHAT V2.0</h2>
-          <label for="lname">ENTER YOUR QUESTION HERE:</label><br>
-          <input type="text" id="lname" name=":" required><br><br>
-          <button type="submit">Submit</button>
-          <button type="button" onclick="toggleForm()">Close</button>
-        </form>
-      </div>
-
-      
-
-     
-
-    
-    
-
-   
 
     <div id="home">
         <p>Introduction...</p>
