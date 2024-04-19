@@ -17,7 +17,8 @@
     document.querySelector('.fb').addEventListener('click', function() {
         window.location.href = '#';
     });
-        </script>
+
+        
 <!-- 
 <div class="chat-box" style="display: none; position: fixed; bottom: 0; left: 0; width: 300px; height: 400px; border: 1px solid black; padding: 10px; background-color: white;">
     <div class="chat-messages" style="height: 80%; overflow-y: scroll;"></div>
@@ -52,6 +53,24 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
+
+
+    <div id="myForm" class="window">
+        <form class="window-content" onsubmit="return submitForm()">
+          <h2>ROHITCHAT V2.0</h2>
+          <label for="lname">ENTER YOUR QUESTION HERE:</label><br>
+          <input type="text" id="lname" name=":" required><br><br>
+          <button type="submit">Submit</button>
+          <button type="button" onclick="toggleForm()">Close</button>
+        </form>
+      </div>
+
+      
+
+     
+
+    
+    
 
    
 
