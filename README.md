@@ -30,23 +30,11 @@ To implement this in any website, the user just needs to add the following piece
 # CSS code:
 
 ``` CSS
-
-#image>img {
-    border-radius: 50%;
-    padding-right: 0%;
-    text-align: right;
-    float: right;
-    height: 100%;
-    width: 20%;
-}
-
-
 .floating-icon {
     position: fixed;
     bottom: 20px;
     right: 20px;
 }
-/* onclick="this.style.backgroundColor='blue' */
 .fb {
     background-color: #ccd2cc;
     color: white;
