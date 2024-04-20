@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
-    <!-- <link rel="stylesheet" href="styles.css"> -->
 </head>
 
 <body>
@@ -19,33 +18,6 @@
             <div class="chat-messages" style="height: 80%; overflow-y: scroll;"></div>
             <textarea class="chat-input" style="width: 100%; height: 20%;"></textarea>
         </div>
-
-        <!-- <script>
-            var chatBox = document.querySelector('.chat-box');
-            var chatInput = document.querySelector('.chat-input');
-            var chatMessages = document.querySelector('.chat-messages');
-
-            document.querySelector('.fb').addEventListener('click', function () {
-                if (chatBox.style.display === 'none' || chatBox.style.display === '') {
-                    chatBox.style.display = 'block';
-                    document.getElementsByClassName('fb')[0].style.backgroundColor = 'grey';
-                } else {
-                    chatBox.style.display = 'none';
-                    document.getElementsByClassName('fb')[0].style.backgroundColor = 'white';
-                }
-            });
-
-            chatInput.addEventListener('keypress', function (e) {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    var message = document.createElement('p');
-                    message.textContent = chatInput.value;
-                    chatMessages.appendChild(message);
-
-                    chatInput.value = '';
-                }
-            });
-        </script> -->
 
         <script>
             var chatBox = document.querySelector('.chat-box');
